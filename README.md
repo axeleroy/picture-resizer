@@ -4,6 +4,8 @@ A simple, multi-threaded picture resizing tool leveraging ImageMagick
 
 ## Installation
 
+First, [install ImageMagick](https://docs.wand-py.org/en/latest/guide/install.html) on your computer.
+
 Once you have cloned the repository, initialize a virtualenv and install the dependencies:
 ```bash
 python3 -m pip install --user virtualenv #Only if you haven't installed virtualenv yet
