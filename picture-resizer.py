@@ -19,7 +19,7 @@ def arg_parsing():
     return parser.parse_args()
 
 
-def resize_picture(source: Image, output: str, extension: str, width: int, square: bool):
+def resize_picture(source: Image, output: str, extension: str, output_width: int, square: bool):
     with source.clone() as img:
         if square is True:
             width = float(img.width)
@@ -35,7 +35,7 @@ def resize_picture(source: Image, output: str, extension: str, width: int, squar
             img.border(color=Color('white'), height=border_height, width=border_width)
             img.crop(top=0, left=0, width=crop_size, height=crop_size)
 
-        img.transform(resize=f'{width}x')
+        img.transform(resize=f'{output_width}x')
         img.save(filename=f'{output}{extension}')
 
         return img.format, img.width, img.height
