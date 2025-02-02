@@ -1,4 +1,3 @@
-#!/home/axel/PycharmProjects/picture-resizer/venv/bin/python3
 import argparse
 import os
 import threading
